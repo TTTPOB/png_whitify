@@ -1,0 +1,26 @@
+[tool.poetry]
+authors = ["tpob <tpob@tpob.xyz>"]
+description = "make png transparent background white (remove alpha channel)"
+license = "MIT"
+name = "png_whitify"
+version = "0.1.0"
+
+[[tool.poetry.source]]
+name = "bfsu"
+url = "https://mirrors.bfsu.edu.cn/pypi/web/simple"
+
+[tool.poetry.dependencies]
+click = "^8.0.3"
+pillow = "^9.0.1"
+python = ">=3.9, <3.11"
+
+[tool.poetry.dev-dependencies]
+black = "^22.1.0"
+pyinstaller = "^4.9"
+
+[tool.poetry.scripts]
+png_whitify = "png_whitify.cli:whitify"
+
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core>=1.0.0"]
